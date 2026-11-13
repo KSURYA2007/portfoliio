@@ -52,21 +52,22 @@ export default function AboutSection() {
 
             {/* Highlighted Projects Done Banner */}
             <div className="pt-2">
-              <div className="p-4 bg-[#111111] border-2 border-[#C5FF00] shadow-[3px_3px_0px_0px_#C5FF00] flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#1A2610] border border-[#C5FF00] flex items-center justify-center font-pixel text-xs text-[#C5FF00]">
+              <div className="p-3.5 sm:p-4 bg-[#111111] border-2 border-[#C5FF00] shadow-[3px_3px_0px_0px_#C5FF00] flex flex-col sm:flex-row sm:items-center justify-between gap-3 overflow-hidden">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 bg-[#1A2610] border border-[#C5FF00] flex items-center justify-center font-pixel text-xs text-[#C5FF00]">
                     20+
                   </div>
-                  <div>
-                    <div className="font-headline text-lg sm:text-xl font-extrabold text-[#F1F1F1] flex items-center gap-2">
-                      <span className="text-[#C5FF00]">20+ Projects</span> Completed
+                  <div className="min-w-0">
+                    <div className="font-headline text-base sm:text-xl font-extrabold text-[#F1F1F1] flex flex-wrap items-baseline gap-1.5 leading-snug">
+                      <span className="text-[#C5FF00]">20+ Projects</span>
+                      <span>Completed</span>
                     </div>
-                    <div className="font-pixel-ui text-[11px] text-[#8E8E93]">
+                    <div className="font-pixel-ui text-[10px] sm:text-[11px] text-[#8E8E93] leading-relaxed break-words">
                       Built and delivered across full-stack web, cloud, and digital utilities
                     </div>
                   </div>
                 </div>
-                <span className="hidden sm:inline-block font-pixel text-[10px] text-[#C5FF00] bg-[#1A1A1A] px-2.5 py-1 border border-[#333333]">
+                <span className="hidden sm:inline-block shrink-0 font-pixel text-[10px] text-[#C5FF00] bg-[#1A1A1A] px-2.5 py-1 border border-[#333333]">
                   DELIVERED
                 </span>
               </div>
