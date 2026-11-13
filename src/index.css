@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-pixel-ui: 'Silkscreen', monospace;
+  --font-headline: 'Syne', sans-serif;
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  
+  --color-retro-bg: #111111;
+  --color-retro-surface: #151515;
+  --color-retro-card: #181818;
+  --color-retro-border: #262626;
+  --color-retro-muted: #8E8E93;
+  --color-neon-lime: #C5FF00;
+  --color-retro-yellow: #FFC83D;
+  --color-off-white: #F1F1F1;
+}
+
+/* Custom Base Styles */
+html {
+  background-color: #111111;
+  color: #F1F1F1;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #111111;
+  color: #F1F1F1;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Pixel Art Classes */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-pixel-ui {
+  font-family: 'Silkscreen', monospace;
+}
+
+.font-headline {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Retro CRT Scanlines Effect */
+.crt-overlay::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 99;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC83D;
+}
+
+/* Pixel Box Border Utilities */
+.pixel-box-white {
+  border: 2px solid #FFFFFF;
+  box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.pixel-box-lime {
+  border: 2px solid #C5FF00;
+  box-shadow: 2px 2px 0px 0px rgba(197, 255, 0, 0.3);
+}
+
+.pixel-box-yellow {
+  border: 2px solid #FFC83D;
+  box-shadow: 2px 2px 0px 0px rgba(255, 200, 61, 0.3);
+}
+
+/* Subtle pulse glow for active items */
+@keyframes lime-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(197, 255, 0, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(197, 255, 0, 0.65);
+  }
+}
+
+.animate-lime-glow {
+  animation: lime-glow 2.5s infinite ease-in-out;
+}
