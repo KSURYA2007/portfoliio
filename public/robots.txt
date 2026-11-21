@@ -1,0 +1,7 @@
+# Allow all search engine crawlers (Googlebot, Bingbot, etc.)
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual production domain)
+Sitemap: https://ksurya2007.github.io/portfoliio/sitemap.xml
+
